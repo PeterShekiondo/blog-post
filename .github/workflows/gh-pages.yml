@@ -6,14 +6,14 @@ on:
       - 'feature/article-1'
     paths:
       - 'content/posts/**'
+  pull_request:
 
-concurrency:
-  cancel-in-progress: true
-  group: publish-${{ github.head_ref || github.ref }}
+permissions:
+  contents: write
 
 jobs:
   publish:
-    name: publish new article to dev
+    name: publish new article
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,5 +24,3 @@ jobs:
           articles_folder: content/posts
           devto_api_key: ${{ secrets.devto_api_key }}
           gh_token: ${{ secrets.TOKEN }}
-
-
