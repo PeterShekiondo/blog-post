@@ -24,6 +24,6 @@ jobs:
           articles_folder: content/posts
           devto_api_key: occqkrPQgV1JxoYkqrvT85yR
           gh_token: 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
-#          medium_token: 2f23ed02d4e779247bc65e17bf2b29eecb73f2ff60d69ad95bec786aae626c3f0
-#          medium_user_id: 9d9b38cc4743
+          medium_token: 2695028acdb67957cdfec5853a6f1b6aae888850a0104e150d115c7414901e06e
+          medium_user_id: 1503496732e05d6a866bab5f234933ef098ff0fb275098183032a9128d31f2efc
 
