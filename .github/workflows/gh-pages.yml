@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   publish:
-    name: publish new article
+    name: publish new article to dev
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
