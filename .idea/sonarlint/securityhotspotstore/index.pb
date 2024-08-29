@@ -14,3 +14,5 @@ Z
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+\
+,themes/hello-friend-ng/layouts/posts/rss.xml,1/f/1ff98349191567c57c7e97fd525868a5218476b2

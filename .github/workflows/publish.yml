@@ -3,7 +3,7 @@ name: 'publish'
 on:
   push:
     branches:
-      - 'main'
+      - 'feature/article-1'
     paths:
       - 'content/posts/**'
 
