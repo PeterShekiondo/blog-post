@@ -3,31 +3,41 @@ name: github pages
 on:
   push:
     branches:
-      - main
+      - 'feature/article-1'
+    paths:
+      - 'content/posts/**'
   pull_request:
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  publish:
+    name: publish new article
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: blogpub
+        uses: protiumx/blogpub@v0.6.0
         with:
-          fetch-depth: 0 # Needed for .GitInfo
+          devto_api_key: occqkrPQgV1JxoYkqrvT85yR
+          gh_token: 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
+          medium_token: 2695028acdb67957cdfec5853a6f1b6aae888850a0104e150d115c7414901e06e
+          medium_user_id: 9d9b38cc4743
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+#jobs:
+#  publish:
+#    name: publish new article
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#      - name: blogpub
+#        uses: protiumx/blogpub@main
+#        with:
+#          articles_folder: content/posts
+#          devto_api_key: occqkrPQgV1JxoYkqrvT85yR
+#          gh_token: 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
+#          medium_token: 2695028acdb67957cdfec5853a6f1b6aae888850a0104e150d115c7414901e06e
+#          medium_user_id: 9d9b38cc4743

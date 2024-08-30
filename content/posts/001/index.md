@@ -8,9 +8,11 @@ tags:
   - blogging
   - blogpub
   - ci
+  
 slug: publish-your-blog-articles-with-this-github-action
 ---
 Long ago I made this [comment](https://dev.to/protium/comment/clno) in this [article](https://dev.to/maxime1992/manage-your-dev-to-blog-posts-from-a-git-repo-and-use-continuous-deployment-to-auto-publish-update-them-143j):
+
 
 
 > This is a really good idea with great potential. 
