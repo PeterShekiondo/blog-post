@@ -22,7 +22,7 @@ jobs:
         uses: protiumx/blogpub@v0.6.0
         with:
           devto_api_key: occqkrPQgV1JxoYkqrvT85yR
-          gh_token: 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
+          gh_token: ${{ secrets.GH_TOKEN }}
           medium_token: 2695028acdb67957cdfec5853a6f1b6aae888850a0104e150d115c7414901e06e
           medium_user_id: 9d9b38cc4743
 
